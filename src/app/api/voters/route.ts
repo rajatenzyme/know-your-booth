@@ -3,6 +3,7 @@
 import { NextResponse } from 'next/server';
 
 import * as fs from 'fs';
+import path from 'path';
 
 
 
@@ -26,36 +27,16 @@ interface VoterRecord {
 // This function will read data from Excel file
 const getVoterData = (): VoterRecord[] => {
     try {
-        // const workbook = XLSX.readFile(filePath);
-        // // const workbook = XLSX.readFile(path.join(process.cwd(), 'data', 'voters.xlsx'));
-        // const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-        // const data = XLSX.utils.sheet_to_json(worksheet);
+        
+        // const data = JSON.parse(fs.readFileSync('public/1.json', 'utf-8'));
 
-        // data = [{
-        //     यादीभाग: "1",
-        //     बूथ_नं: "1",
-        //     अ_क्र: "1",
-        //     lastName: "हुमणे",
-        //     firstName: "भाविका",
-        //     middleName: "भगवान",
-        //     eLastName: "Humane",
-        //     eFirstName: "Bhavika",
-        //     eMiddleName: "Bhagavan",
-        //     लिंग: "F",
-        //     वय: "40",
-        //     voterId: "UMM7170087",
-        //     epicNo : "UMM7170087",
-        //     मतदान_केंद्र: "झुगरेवाडी रा. जि . प. प्राथमिक मराठी शाळा (नवीन इमारत ) खोली क्र. 1 झुगरेवाडी"
-        // }];
-        // const data = JSON.parse(fs.readFileSync('/Users/rajat/Desktop/rohan-voter/my-voter-app/data/1.json', 'utf-8'));
-        const data = JSON.parse(fs.readFileSync('public/1.json', 'utf-8'));
+        const filePath = path.join(process.cwd(), 'public', '1.json');
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
 
-        // console.log("hi data",data);
+        console.log("hi data",data);
 
         
-
-        // console.log(data);
         return data.map((record: any) => ({
             यादीभाग: record['यादीभाग']?.toString() || '',
             बूथ_नं: record['बूथ नं']?.toString() || '',
@@ -76,6 +57,8 @@ const getVoterData = (): VoterRecord[] => {
         return [];
     }
 };
+
+
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);

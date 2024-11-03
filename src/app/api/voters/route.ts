@@ -34,7 +34,7 @@ const getVoterData = (): VoterRecord[] => {
         const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
 
-        console.log("hi data",data);
+        // console.log("hi data",data);
 
         
         return data.map((record: any) => ({

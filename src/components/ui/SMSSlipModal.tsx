@@ -43,12 +43,12 @@ const SmsSlipModal: React.FC<SmsSlipModalProps> = ({
     
     // Here you would implement the SMS sending logic
     const smsText = encodeURIComponent(`विधानसभा: 142 - कल्याण पूर्व
-यादी क्र: ${voterData?.अ_क्र || '1002'}
-CardNo: ${voterData?.voterId || 'YUH210475'}
-Name: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}
-Address: ${voterData?.मतदान_केंद्र}`);
+          यादी क्र: ${voterData?.अ_क्र || '1002'}
+          CardNo: ${voterData?.voterId || 'YUH210475'}
+          Name: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}
+          Address: ${voterData?.मतदान_केंद्र}`);
 
-    const smsUrl = `sms:+91${smsNumber}&text=${smsText}`;
+    const smsUrl = `sms:+91${smsNumber}&body=${smsText}`;
     
     // Simulate sending SMS
     console.log('Sending to SMS:', smsUrl);

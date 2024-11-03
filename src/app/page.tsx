@@ -120,9 +120,9 @@ export default function VoterSearch() {
             {/* /* Add Banner Image */}
             <div className="mb-6">
                 <img 
-                src="/Banner.png" 
+                src="/Banner.jpeg" 
                 alt="Banner" 
-                className="w-full h-auto" 
+                className="w-full h-full" 
                 />
             </div>
             <div className='font-bold'>आपले नाव मतदान यादीत शोधण्यासाठी - 1. पहिल्या नावाची 3 अक्षरे - मधल्या नावाची 3 अक्षरे - आडनावाची 3 अक्षरे टाइप करा. 2. आपली मतदान स्लिप SMS किंवा WhatsApp द्वारे मिळवा.

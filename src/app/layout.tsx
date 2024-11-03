@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Know Your Booth | Surendra Bapusaheb Pathare",
+  title: "Know Your Booth | Mahesh Dashrath Gaikwad",
   description: "Developed by Rajat Mittal",
 };
 

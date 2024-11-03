@@ -47,8 +47,11 @@ const getVoterData = (): VoterRecord[] => {
         //     epicNo : "UMM7170087",
         //     मतदान_केंद्र: "झुगरेवाडी रा. जि . प. प्राथमिक मराठी शाळा (नवीन इमारत ) खोली क्र. 1 झुगरेवाडी"
         // }];
-        const data = JSON.parse(fs.readFileSync('/Users/rajat/Desktop/rohan-voter/my-voter-app/data/1.json', 'utf-8'));
-        // console.log(data);
+        // const data = JSON.parse(fs.readFileSync('/Users/rajat/Desktop/rohan-voter/my-voter-app/data/1.json', 'utf-8'));
+        const data = JSON.parse(fs.readFileSync('public/1.json', 'utf-8'));
+
+
+        // console.log("hi data",data);
 
         
 

@@ -120,7 +120,7 @@ export default function VoterSearch() {
             {/* /* Add Banner Image */}
             <div className="mb-6">
                 <img 
-                src="/Banner.jpg" 
+                src="/Banner.png" 
                 alt="Banner" 
                 className="w-full h-auto" 
                 />

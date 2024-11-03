@@ -24,7 +24,7 @@ interface VoterData {
 interface WhatsAppSlipModalProps {
   isOpen: boolean;
   onClose: () => void;
-  voterData?: VoterData;
+  voterData?: VoterData | null;
 }
 
 const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({ 

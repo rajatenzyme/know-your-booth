@@ -24,7 +24,7 @@ interface VoterData {
 interface SmsSlipModalProps {
   isOpen: boolean;
   onClose: () => void;
-  voterData?: VoterData;
+  voterData?: VoterData | null;
 }
 
 const SmsSlipModal: React.FC<SmsSlipModalProps> = ({ 

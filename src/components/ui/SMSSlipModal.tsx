@@ -48,11 +48,11 @@ const SmsSlipModal: React.FC<SmsSlipModalProps> = ({
           Name: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}
           Address: ${voterData?.मतदान_केंद्र}`);
 
-    const smsUrl = `sms:+91${smsNumber}&body=${smsText}`;
+    const smsUrl = `sms:+91${smsNumber}?body=${smsText}`;
     
     // Simulate sending SMS
     console.log('Sending to SMS:', smsUrl);
-    window.open(smsUrl, '_blank');
+    window.open(smsUrl);
     
     onClose();
     setSmsNumber(''); // Reset the input

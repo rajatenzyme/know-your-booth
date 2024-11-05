@@ -50,7 +50,7 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
         
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+91${whatsappNumber}&text=${smsText}`;
     console.log('Sending to WhatsApp:', whatsappUrl);
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl);
     onClose();
     setWhatsappNumber(''); // Reset the input
   };

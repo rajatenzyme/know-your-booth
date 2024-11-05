@@ -120,7 +120,7 @@ export default function VoterSearch() {
             {/* /* Add Banner Image */}
             <div className="mb-6">
                 <img 
-                src="/Banner.jpeg" 
+                src="/Banner.jpg" 
                 alt="Banner" 
                 className="w-full h-full" 
                 />
@@ -128,7 +128,7 @@ export default function VoterSearch() {
             <div className='font-bold'>आपले नाव मतदान यादीत शोधण्यासाठी - 1. पहिल्या नावाची 3 अक्षरे - मधल्या नावाची 3 अक्षरे - आडनावाची 3 अक्षरे टाइप करा. 2. आपली मतदान स्लिप SMS किंवा WhatsApp द्वारे मिळवा.
             </div>
             <Card className="mb-6 p-6">
-                <h1 className="text-2xl font-bold mb-6 text-center bg-red-400 text-white py-2">
+                <h1 className="text-2xl font-bold mb-6 text-center bg-yellow-400 text-white py-2">
                     कल्याण पूर्व
                 </h1>
 

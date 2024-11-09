@@ -18,10 +18,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Voter Search - Kalyan East',
+  title: 'Voter Search - Mahesh Gaikwad',
   description: 'Search and get your voter slip for Kalyan East constituency. Find your voter details by name or EPIC number.',
   openGraph: {
-    title: 'Voter Search - Kalyan East',
+    title: 'Voter Search - Mahesh Gaikwad',
     description: 'Search and get your voter slip for Kalyan East constituency. Find your voter details by name or EPIC number.',
     images: [
       {

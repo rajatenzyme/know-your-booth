@@ -8,7 +8,7 @@ export async function GET(request: Request) {
         
         const { searchParams } = new URL(request.url);
 
-        // console.log("hi ", searchParams);
+        console.log("searchParams ", searchParams);
     
         const firstName = searchParams.get('firstName');
         const middleName = searchParams.get('middleName');
@@ -22,45 +22,56 @@ export async function GET(request: Request) {
 
         let query: any = {};
 
+        // Search by EPIC number if provided
         if (epicNo) {
             query.voterId = new RegExp(epicNo, 'i');
-        } else {
-            if (firstName) {
-                query.$or = [
-                    { firstName: new RegExp(firstName, 'i') },
-                    { eFirstName: new RegExp(firstName, 'i') }
-                ];
+        } 
+        // Otherwise, search by name with first and last name being mandatory
+        else {
+            // Check if first and last name are provided
+            if (!firstName || !lastName) {
+                return NextResponse.json(
+                    { 
+                        success: false, 
+                        error: 'First name and last name are required when not searching by EPIC number' 
+                    },
+                    { status: 400 }
+                );
             }
-            
-            if (middleName) {
-                const middleNameQuery = {
+
+            // Build the name search query
+            query.$and = [
+                {
                     $or: [
-                        { middleName: new RegExp(middleName, 'i') },
-                        { eMiddleName: new RegExp(middleName, 'i') }
+                        { firstName: new RegExp(firstName, 'i') },
+                        { eFirstName: new RegExp(firstName, 'i') }
                     ]
-                };
-                query = query.$or ? { $and: [query, middleNameQuery] } : middleNameQuery;
-            }
-            
-            if (lastName) {
-                const lastNameQuery = {
+                },
+                {
                     $or: [
                         { lastName: new RegExp(lastName, 'i') },
                         { eLastName: new RegExp(lastName, 'i') }
                     ]
-                };
-                query = query.$or ? { $and: [query, lastNameQuery] } : lastNameQuery;
+                }
+            ];
+
+            // Add middle name to search criteria if provided
+            if (middleName) {
+                query.$and.push({
+                    $or: [
+                        { middleName: new RegExp(middleName, 'i') },
+                        { eMiddleName: new RegExp(middleName, 'i') }
+                    ]
+                });
             }
         }
         
-        // console.log("query ", query);
+        console.log("query ", query);
         
         const [results, total] = await Promise.all([
             Voter.find(query).skip(skip).limit(limit),
             Voter.countDocuments(query)
         ]);
-
-        // console.log("results ", results);
 
         return NextResponse.json({ 
             success: true, 

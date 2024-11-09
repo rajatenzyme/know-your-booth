@@ -300,7 +300,8 @@ export default function VoterSearch() {
                             </div>
                             
                             <div className="font-semibold text-lg mb-2">
-                                {voter.firstName} {voter.middleName} {voter.lastName} ({voter.वय} {voter.लिंग})
+                                {voter.firstName} {voter.middleName} {voter.lastName} 
+                                {/* ({voter.वय} {voter.लिंग}) */}
                             </div>
                             
                             <div className="text-sm mb-2">

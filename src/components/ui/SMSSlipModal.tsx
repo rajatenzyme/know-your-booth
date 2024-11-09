@@ -50,17 +50,15 @@ const SmsSlipModal: React.FC<SmsSlipModalProps> = ({
 नाव: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}
 Booth: ${voterData?.मतदान_केंद्र}
 
-सौजन्य से:
+धन्यवाद
 महेश दशरथ गायकवाड
 सर्वपक्षीय स्थानिक अपक्ष उमेदवार
-निशाणी :- अंगठी 
-बटण क्र :- 14 
+निशाणी :- अंगठी
+बटण क्र :- 14
 
 विधानसभा 2024 च्या निवडणुकीत 142-कल्याण पूर्व मतदारसंघातील आपले नाव शोधण्यासाठी, महेश दशरथ गायकवाड ह्यांच्या माध्यमातून दिलेल्या Voter Search Link वर क्लिक करा, आपले आणि आपल्या परिचयातील लोकांचे नाव तपासा आणि त्यांच्या माहितीचे तपशील WhatsApp किंवा SMS द्वारे शेअर करा.
 
-धन्यवाद!
-
-https://know-your-booth.vercel.app/
+अधिक माहितीसाठी कृपया भेट द्या : *https://know-your-booth.vercel.app/*
             `);
 
     const smsUrl = `sms:+91${smsNumber}?body=${smsText}`;

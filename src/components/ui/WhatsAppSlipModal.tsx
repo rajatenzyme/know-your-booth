@@ -40,27 +40,26 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
       alert('Please enter a valid WhatsApp number');
       return;
     }
-    
+    const imageUrl = 'https://know-your-booth.vercel.app/Banner4.jpeg'
     // Here you would implement the WhatsApp sending logic
     const smsText = encodeURIComponent(`
-विधानसभा: 142 - कल्याण पूर्व
-यादी क्र: ${voterData?.यादीभाग || '1002'}
-अ.क्र: ${voterData?.अ_क्र || '1002'}
-मतदान ओळखपत्र क्र: ${voterData?.voterId || 'YUH210475'}
-नाव: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}
-Booth: ${voterData?.मतदान_केंद्र}
+*विधानसभा: 142 - कल्याण पूर्व*
+*यादी क्र: ${voterData?.यादीभाग || '1002'}*
+*अ.क्र: ${voterData?.अ_क्र || '1002'}*
+*मतदान ओळखपत्र क्र: ${voterData?.voterId || 'YUH210475'}*
+*नाव: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}*
+*Booth: ${voterData?.मतदान_केंद्र}*
 
-सौजन्य से:
-महेश दशरथ गायकवाड
-सर्वपक्षीय स्थानिक अपक्ष उमेदवार
-निशाणी :- अंगठी 
-बटण क्र :- 14 
+*धन्यवाद*
+*महेश दशरथ गायकवाड*
+*सर्वपक्षीय स्थानिक अपक्ष उमेदवार*
+*निशाणी :- अंगठी*
+*बटण क्र :- 14*
 
 विधानसभा 2024 च्या निवडणुकीत 142-कल्याण पूर्व मतदारसंघातील आपले नाव शोधण्यासाठी, महेश दशरथ गायकवाड ह्यांच्या माध्यमातून दिलेल्या Voter Search Link वर क्लिक करा, आपले आणि आपल्या परिचयातील लोकांचे नाव तपासा आणि त्यांच्या माहितीचे तपशील WhatsApp किंवा SMS द्वारे शेअर करा.
 
-धन्यवाद!
-
-https://know-your-booth.vercel.app/
+अधिक माहितीसाठी कृपया भेट द्या : *https://know-your-booth.vercel.app/*
+${imageUrl}
       `);
       
         

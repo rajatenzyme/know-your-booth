@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Voter Search - Kalyan East',
+    title: 'Voter Search - Mahesh Gaikwad',
     description: 'Search and get your voter slip for Kalyan East constituency. Find your voter details by name or EPIC number.',
     images: ['/Banner.jpeg'], // Make sure this matches your banner image path
   },

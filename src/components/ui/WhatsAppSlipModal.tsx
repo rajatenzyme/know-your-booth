@@ -40,7 +40,6 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
       alert('Please enter a valid WhatsApp number');
       return;
     }
-    const imageUrl = 'https://know-your-booth.vercel.app/Banner4.jpeg'
     // Here you would implement the WhatsApp sending logic
     const smsText = encodeURIComponent(`
 *विधानसभा: 142 - कल्याण पूर्व*
@@ -59,7 +58,7 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
 विधानसभा 2024 च्या निवडणुकीत 142-कल्याण पूर्व मतदारसंघातील आपले नाव शोधण्यासाठी, महेश दशरथ गायकवाड ह्यांच्या माध्यमातून दिलेल्या Voter Search Link वर क्लिक करा, आपले आणि आपल्या परिचयातील लोकांचे नाव तपासा आणि त्यांच्या माहितीचे तपशील WhatsApp किंवा SMS द्वारे शेअर करा.
 
 अधिक माहितीसाठी कृपया भेट द्या : *https://know-your-booth.vercel.app/*
-${imageUrl}
+
       `);
       
         

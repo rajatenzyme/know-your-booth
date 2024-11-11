@@ -309,7 +309,7 @@ export default function VoterSearch() {
                             </div>
                             
                             <div className="text-sm mb-2">
-                                <span className="font-bold">Booth :</span> {voter.मतदान_केंद्र}
+                                <span className="font-bold">मतदान केन्द्र :</span> {voter.मतदान_केंद्र}
                             </div>
 
                             <div className="mt-4 flex gap-2">

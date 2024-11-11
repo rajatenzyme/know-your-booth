@@ -10,9 +10,9 @@ export async function GET(request: Request) {
 
         console.log("searchParams ", searchParams);
     
-        const firstName = searchParams.get('firstName');
-        const middleName = searchParams.get('middleName');
-        const lastName = searchParams.get('lastName');
+        const firstName = searchParams.get('firstName')?.trim();
+        const middleName = searchParams.get('middleName')?.trim();
+        const lastName = searchParams.get('lastName')?.trim();
         const epicNo = searchParams.get('epicNo');
         
         // Add pagination parameters

@@ -47,7 +47,7 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
 *अ.क्र: ${voterData?.अ_क्र || '1002'}*
 *मतदान ओळखपत्र क्र: ${voterData?.voterId || 'YUH210475'}*
 *नाव: ${voterData?.firstName} ${voterData?.middleName} ${voterData?.lastName}*
-*Booth: ${voterData?.मतदान_केंद्र}*
+*मतदान केन्द्र: ${voterData?.मतदान_केंद्र}*
 
 *धन्यवाद*
 *महेश दशरथ गायकवाड*
@@ -57,7 +57,7 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
 
 विधानसभा 2024 च्या निवडणुकीत 142-कल्याण पूर्व मतदारसंघातील आपले नाव शोधण्यासाठी, महेश दशरथ गायकवाड ह्यांच्या माध्यमातून दिलेल्या Voter Search Link वर क्लिक करा, आपले आणि आपल्या परिचयातील लोकांचे नाव तपासा आणि त्यांच्या माहितीचे तपशील WhatsApp किंवा SMS द्वारे शेअर करा.
 
-अधिक माहितीसाठी कृपया भेट द्या : *https://know-your-booth.vercel.app/*
+अधिक माहितीसाठी कृपया भेट द्या : *mahesh-gaikwad.in*
 
       `);
       
@@ -83,15 +83,15 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
             <table className="w-full">
               <tbody>
                 <tr>
-                  <td className="py-2 px-4 text-gray-600 font-medium">Sr No.</td>
+                  <td className="py-2 px-4 text-gray-600 font-medium">अ क्र</td>
                   <td className="py-2 px-4">{voterData?.अ_क्र || '1002'}</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-4 text-gray-600 font-medium">Booth No</td>
+                  <td className="py-2 px-4 text-gray-600 font-medium">यादीभाग</td>
                   <td className="py-2 px-4">{voterData?.यादीभाग || '9'}</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-4 text-gray-600 font-medium">CardNo</td>
+                  <td className="py-2 px-4 text-gray-600 font-medium">मतदान ओळखपत्र क्र</td>
                   <td className="py-2 px-4">{voterData?.voterId || 'YUH210475'}</td>
                 </tr>
               </tbody>
@@ -104,7 +104,7 @@ const WhatsAppSlipModal: React.FC<WhatsAppSlipModalProps> = ({
             </h3>
             
             <div className="space-y-2">
-              <h4 className="font-medium">Booth :</h4>
+              <h4 className="font-medium">मतदान केन्द्र :</h4>
               <p className="text-gray-600">{voterData?.मतदान_केंद्र}</p>
               
               {/* <h4 className="font-medium mt-4">Booth Name:</h4>

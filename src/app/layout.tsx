@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Head from 'next/head';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://know-your-booth.vercel.app/'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'mahesh-gaikwad.in'
 
 
 import localFont from "next/font/local";
@@ -55,18 +55,18 @@ export default function RootLayout({
                 <title>Voter Search - Mahesh Gaikwad</title>
                 <meta name="description" content="Search and get your voter slip for Kalyan East constituency. Find your voter details by name or EPIC number." />
 
-                <meta property="og:url" content="https://know-your-booth.vercel.app/" />
+                <meta property="og:url" content="mahesh-gaikwad.in" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Voter Search - Mahesh Gaikwad" />
                 <meta property="og:description" content="Search and get your voter slip for Kalyan East constituency. Find your voter details by name or EPIC number." />
-                <meta property="og:image" content="https://know-your-booth.vercel.app/Banner.jpeg" />
+                <meta property="og:image" content="mahesh-gaikwad.inBanner.jpeg" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="know-your-booth.vercel.app" />
-                <meta property="twitter:url" content="https://know-your-booth.vercel.app/" />
+                <meta property="twitter:url" content="mahesh-gaikwad.in" />
                 <meta name="twitter:title" content="Voter Search - Mahesh Gaikwad" />
                 <meta name="twitter:description" content="Search and get your voter slip for Kalyan East constituency. Find your voter details by name or EPIC number." />
-                <meta name="twitter:image" content="https://know-your-booth.vercel.app/Banner.jpeg" />
+                <meta name="twitter:image" content="mahesh-gaikwad.inBanner.jpeg" />
             </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
